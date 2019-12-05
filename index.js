@@ -207,7 +207,10 @@ function getCarInfoById(inventory, id) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-  inventorySortedByCarModel = inventory.sort((a, b) => a.car_model.localeCompare(b.car_model))
+  return inventory.car_model.sort();
+{
+
+}
 return inventorySortedByCarModel;
 }
 
