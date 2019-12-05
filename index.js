@@ -207,10 +207,7 @@ function getCarInfoById(inventory, id) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-  return inventory.car_model.sort();
-{
-
-}
+  var inventorySortedByCarModel = [inventory.sort((a, b) => a.car_model.localeCompare(b.car_model))]
 return inventorySortedByCarModel;
 }
 
@@ -269,22 +266,13 @@ function getOlderCars(inventory, year) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  arrayContainingGermanCars = [];
+  const arrayContainingGermanCars = [];
 
-  for(i=0; i<inventory.length; i++)
+  for(let i=0; i<inventory.length; i++)
   {
-    if (inventory[i].car_make == 'Audi' ) {
+    if (inventory[i].car_make == 'Audi' || inventory[i].car_make == 'Mercedes-Benz' || inventory[i].car_make == 'Volkswagen' || inventory[i].car_make == 'BMW'  ) {
     arrayContainingGermanCars.push(inventory[i]);
     }
-    else if (inventory[i].car_make == 'Mercedes-Benz' ) {
-      arrayContainingGermanCars.push(inventory[i]);
-      }
-    else if (inventory[i].car_make == 'Volkswagen' ) {
-      arrayContainingGermanCars.push(inventory[i]);
-      }
-    else if (inventory[i].car_make == 'BMW' ) {
-      arrayContainingGermanCars.push(inventory[i]);
-      }        
   }
   return arrayContainingGermanCars;
 }
@@ -324,9 +312,15 @@ const argTimesTwo = num => {return num * 2; };; // code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(number) {
+//   odometer: number,
+//   drive: function (distance) {
+//     odometer = odometer + distance;
+//   }
+// }
+//     return odometer;
 }
+
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
