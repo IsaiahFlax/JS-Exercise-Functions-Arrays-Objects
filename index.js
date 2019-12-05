@@ -79,12 +79,14 @@ function getName(objectContainingName) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(singleNameArgument) {  
+function makeSmartPerson(name) {  
   return {
-    name:singleNameArgument,
+    name,
     sum : function (num1, num2) {
       return num1 + num2; },
-    speak: function () {return("Hello, my name is " +singleNameArgument.name);}
+    speak: function () {
+      return `Hello, my name is  ${name}`;
+    }
     }
 
     }
