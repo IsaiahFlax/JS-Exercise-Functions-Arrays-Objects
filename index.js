@@ -319,13 +319,16 @@ const argTimesTwo = num => {return num * 2; };; // code here!
  *         (2) returns the updated value of the `odometer`.
 */
 function carMaker(number) {
-//   odometer: number,
-//   drive: function (distance) {
-//     odometer = odometer + distance;
-//   }
-// }
-//     return odometer;
+  let updatedValue = {
+   odometer: number,
+   drive: function (distance) {
+     updatedValue.odometer = number += distance;
+     return updatedValue.odometer;
+   }
+ }
+     return updatedValue;
 }
+
 
 
 /// ////// END OF CHALLENGE /////////
