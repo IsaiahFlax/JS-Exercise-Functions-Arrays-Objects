@@ -250,11 +250,10 @@ function getOlderCars(inventory, year) {
     if (inventory[i].car_year <= year ) {
     arrayContainingCars.push(inventory[i]);
     }
-  else {
-    i++;
-  }
+
   }
   return arrayContainingCars;
+  console.log(arrayContainingCars);
 }
 /**
  * ### Challenge `getGermanCars`
