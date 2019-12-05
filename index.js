@@ -243,18 +243,18 @@ function getModelYears(inventory) {
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(inventory, year) {
-  arrayContainingCarYears = [];
+  arrayContainingCars = [];
 
   for(i=0; i<inventory.length; i++)
   {
     if (inventory[i].car_year <= year ) {
-    arrayContainingCarYears.push(inventory[i].car_year);
+    arrayContainingCars.push(inventory[i]);
     }
   else {
     i++;
   }
   }
-  return arrayContainingCarYears;
+  return arrayContainingCars;
 }
 /**
  * ### Challenge `getGermanCars`
