@@ -253,7 +253,6 @@ function getOlderCars(inventory, year) {
 
   }
   return arrayContainingCars;
-  console.log(arrayContainingCars);
 }
 /**
  * ### Challenge `getGermanCars`
@@ -266,8 +265,25 @@ function getOlderCars(inventory, year) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+  arrayContainingGermanCars = [];
+
+  for(i=0; i<inventory.length; i++)
+  {
+    if (inventory[i].car_make == 'Audi' ) {
+    arrayContainingGermanCars.push(inventory[i]);
+    }
+    else if (inventory[i].car_make == 'Mercedes-Benz' ) {
+      arrayContainingGermanCars.push(inventory[i]);
+      }
+    else if (inventory[i].car_make == 'Volkswagen' ) {
+      arrayContainingGermanCars.push(inventory[i]);
+      }
+    else if (inventory[i].car_make == 'BMW' ) {
+      arrayContainingGermanCars.push(inventory[i]);
+      }        
+  }
+  return arrayContainingGermanCars;
 }
 
 /**
