@@ -227,11 +227,11 @@ function sortCarInventory(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  arrayContainingAllCarYears = [];
+ let arrayContainingAllCarYears = [];
 
-  for(i=0; i<inventory.length; i++)
+  for(let i=0; i<inventory.length; i++)
   {
-    arrayContainingAllCarYears.push(inventory[i].car_year);
+    let arrayContainingAllCarYears.push(inventory[i].car_year);
   }
   return arrayContainingAllCarYears;
 }
@@ -249,9 +249,9 @@ function getModelYears(inventory) {
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(inventory, year) {
-  arrayContainingCars = [];
+  let arrayContainingCars = [];
 
-  for(i=0; i<inventory.length; i++)
+  for(let i=0; i<inventory.length; i++)
   {
     if (inventory[i].car_year <= year ) {
     arrayContainingCars.push(inventory[i]);
