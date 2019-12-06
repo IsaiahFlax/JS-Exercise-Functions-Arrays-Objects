@@ -231,7 +231,7 @@ function getModelYears(inventory) {
 
   for(let i=0; i<inventory.length; i++)
   {
-    let arrayContainingAllCarYears.push(inventory[i].car_year);
+    arrayContainingAllCarYears.push(inventory[i].car_year);
   }
   return arrayContainingAllCarYears;
 }
